@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        body,html{
+            margin: 0%;
+            padding: 0%;
+            height: 100%;
+        }
+        .container{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #928DAB;
+            flex-direction: column;
+        }
+        .box{
+            background-color:#102542;
+            border-radius: 10px;
+            border: 5px solid darkorange;
+            padding: 40px 80px;
+        }
+        h2{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            color: #102542;
+        }
+        button{
+            border-radius: 50%;
+            border: 3px solid darkorange;
+        }
+        button:hover{
+            color:white;
+            transform: scale(0.8);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>RPS Game</h2>
+    <div class="box">
+    <button onclick="rock()">
+    <img src="rock2.png (1).png" height="100px" width="100px">
+    </button>
+    <button onclick="paper()">
+    <img src="paper2.png.png" height="100px" width="100px">
+    </button>
+    <button onclick="scissor()">
+    <img src="scissor2.png (1).png" height="100px" width="100px">
+    </button>
+        </div>
+    </div>
+    <script>
+        function rock() {
+            let value = Math.floor(Math.random() * 3);
+            let r = 0;
+            if (value == r) {
+                alert("Tie");
+                console.log("computer chose rock and you chose rock so it's a tie");
+            }
+            else if (value == 1) {
+                alert("computer won");
+                console.log("computer chose paper and you chose rock so computer won");
+            }
+            else {
+                alert("You won");
+                console.log("computer chose scissor and you chose rock so you won");
+            }
+        }
+        function paper() {
+            let value = Math.floor(Math.random() * 3);
+            let p = 1;
+            if (value == p) { 
+                alert("Tie");
+                console.log("computer chose paper and you chose paper so it's a tie");
+            }
+            else if (value == 2) {
+                alert("computer won");
+                console.log("computer chose rock and you chose paper so computer won");
+            }
+            else {
+                alert("You won");
+                console.log("computer chose scissor and you chose rock so you won");
+            }
+        }
+        function scissor() {
+            let value = Math.floor(Math.random() * 3);
+            let s = 2;
+            if (value == s) {
+                alert("Tie");
+                console.log("computer chose scissor and you chose scissor so it's a tie");
+            }
+            else if (value == 1) {
+                alert("computer won");
+                console.log("computer chose scissor and you chose paper so computer won");
+            }
+            else {
+                alert("You won");
+                console.log("computer chose scissor and you chose rock so you won");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
